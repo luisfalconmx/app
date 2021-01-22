@@ -1,0 +1,42 @@
+@import "../Vars.scss";
+
+.search {
+  display: flex;
+  margin: 5px;
+}
+
+.search__input {
+  width: calc(460px - 48px);
+  height: calc(60px - 28px);
+  padding: 14px 24px;
+  border: 1px solid $color-white;
+  border-radius: 6px;
+  font-size: 18px;
+  color: $color-white;
+  outline: none;
+  background-color: transparent;
+}
+
+.search__button {
+  width: auto;
+  min-width: 166px;
+  height: auto;
+  min-height: 60px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: $color-white;
+  background-color: $color-primary;
+  cursor: pointer;
+  outline: none;
+  transition: .4s;
+  &:active {
+    transition: .1s;
+    transform: scale(0.92);
+  }
+}
