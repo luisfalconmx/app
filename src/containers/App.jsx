@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import Footer from '../components/Footer'
 
 const App = () => {
-  const [videos, setVideos] = useState([])
+  const [videos, setVideos] = useState({ mylist: [], trends: [], originals: [] })
 
   useEffect(() => {
     fetch('http://localhost:3000/initalState')
@@ -14,13 +14,13 @@ const App = () => {
       .then(data => setVideos(data))
   }, [])
 
-  console.log(videos)
-
   return (
     <div className="App">
       <Navbar />
       <Search />
-      <Card />
+      {videos.trends.map(item =>
+        <Card key={item.id} {...item} />
+      )}
       <Footer />
     </div>
   )
