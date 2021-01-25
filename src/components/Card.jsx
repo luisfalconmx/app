@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import '../assets/styles/components/Card.scss'
 import Cover from '../assets/static/cover.png'
 
@@ -17,5 +18,13 @@ const Card = ({ cover, title, year, contentRating, duration }) => (
     </a>
   </div>
 )
+
+Card.propTypes = {
+  cover: PropTypes.string,
+  title: PropTypes.string,
+  year: PropTypes.number,
+  contentRating: PropTypes.string,
+  duration: PropTypes.number
+}
 
 export default Card

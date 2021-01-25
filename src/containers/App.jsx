@@ -4,21 +4,17 @@ import Navbar from '../components/Navbar'
 import Search from '../components/Search'
 import Card from '../components/Card'
 import Footer from '../components/Footer'
+import useInitialState from '../hooks/useInitialState'
+
+const API = 'http://localhost:3000/initalState/'
 
 const App = () => {
-  const [videos, setVideos] = useState({ mylist: [], trends: [], originals: [] })
-
-  useEffect(() => {
-    fetch('http://localhost:3000/initalState')
-      .then(response => response.json())
-      .then(data => setVideos(data))
-  }, [])
-
+  const initialState = useInitialState(API)
   return (
     <div className="App">
       <Navbar />
       <Search />
-      {videos.trends.map(item =>
+      {initialState.trends.map(item =>
         <Card key={item.id} {...item} />
       )}
       <Footer />
