@@ -1,5 +1,5 @@
 {
-  "name": "classroom",
+  "name": "app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LuisFalconMX/classroom.git"
+    "url": "git+https://github.com/luisfalconmx/app.git"
   },
   "keywords": [],
-  "author": "LuisFalconMX",
+  "author": "luisfalconmx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LuisFalconMX/classroom/issues"
+    "url": "https://github.com/luisfalconmx/app/issues"
   },
-  "homepage": "https://github.com/LuisFalconMX/classroom#readme",
+  "homepage": "https://github.com/luisfalconmx/app#readme",
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.18.0",
